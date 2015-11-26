@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objects</title>
+</head>
+<body>
+
+	<script>
+		var hackerYou = {
+			numberOfCourses: 12,
+			age: 4,
+			instructorName: 'Drew',
+			color: 'brown',
+			country: 'Canada'
+		}
+
+		var student = {
+			id: 90210,
+			age: 27,
+			GPA: 4.5,
+			highschool: 'Nelson',
+			name: 'Joey Joe Joe',
+			animal: 'Dog'
+		}
+
+		var inventory = {
+			apples: 2,
+			oranges: 3,
+			bananas: 6,
+			milk: 2
+		}
+
+		console.log("We have " + inventory.apples + "apples, " + inventory.oranges + "oranges, " + inventory.bananas + "bananas, and " + inventory.milk + "milk in stock.");
+
+		console.log("The student " + student.name + "(ID: " + student.id + ") is " + student.age + "years old.  He has a GPA of " + student.GPA + "and is from " + student.highschool + ".");
+
+		for (item in inventory) {
+			console.log(item);
+		}
+
+
+		
+
+	</script>
+	
+</body>
+</html>
