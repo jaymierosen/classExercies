@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <title>Do this stuff</title>
+</head>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<style>
+
+  ul {
+    margin:0;
+    padding:0;
+  }
+  ul li {
+    cursor: move;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    background:#333;
+    border:1px solid orange;
+    color:white;
+    border-radius:5px;
+  }
+</style>
+<body>
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="page-header"> <h1>Do this stuff</h1></div>
+    <form>
+      <input class="form-control input-lg" type="text" placeholder="Add an item...">
+    </form>
+    <ul id="sortable">
+      <!-- To do items get added dynamically here -->
+    </ul>
+  </div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+
+
+$(document).ready(function() {
+
+  $('form').on('submit', function(e) {
+    e.preventDefault();    
+    var toDo = $('input').val();
+
+    if (toDo !== '') {
+      $('ul').append('<li><span class="glyphicon glyphicon-unchecked"></span>' + toDo + '</li>');
+      $('input').val('');
+    } else {
+      console.log('error');
+
+    }
+  });
+
+
+
+  $('ul').on('click', 'li', function() {
+    var checkBox = $(this).find('.glyphicon');
+    checkBox.toggleClass("glyphicon-unchecked glyphicon-check");
+    $(this).toggleClass('text-muted');
+    $(this).appendTo($('li'));
+  });
+
+  $("#sortable").sortable();
+
+
+
+
+
+
+
+
+});
+
+</script>
+</body>
+</html>
