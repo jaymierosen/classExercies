@@ -6,7 +6,7 @@
 
 .removeClass() = remove the class in the method to the selected element
 
-.toggleClass() = toggle the class inside the method on and off.  Similar to remove class
+.toggleClass() = toggle the class inside the method on and off.  Similar to remove class.  Add or remove one or more classes from each element in the set of matched elements
 
 .val() = get the values of the sumbitted form elements/whatever selector is beign used
 
