@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Space Letters!</title>
+</head>
+	<style>
+
+	body {
+		background:#333;
+		color:white;
+		font-size:62.5%;
+		text-align:center;
+	}
+
+	h1 {
+		font-size:3rem;
+		max-width:40%;
+		margin:0 auto;
+	}
+	
+	input {
+		border:1px solid orange;
+		font-size:1.5rem;
+		border-radius:5px;
+		background:lightgray;
+		
+	}
+
+	p {
+		font-size:1.5rem;
+		color:white;
+
+	}
+
+	a {
+		font-size:1.5rem;
+		border:1px solid white;
+		border-radius: 5px;
+		padding:3px;
+		transition:.5s;
+
+	}
+
+	a:hover {
+		cursor: crosshair;
+		background:orange;
+		color:#333;
+		border:1px solid black;
+	}
+
+	div#output,
+	div#output2 {
+		font-size: 3rem;
+		transition:2s;
+		padding:20px;
+	}
+
+
+
+	</style>
+<body>
+	
+	<h1>Give it some Space!</h1>
+
+	<p>Enter your words below, and see the space between grow</p>
+	<input type="textbox" id="number"/>
+	<a href"#" id="btn" value="factorial">And click here!</a>
+	<div id="output"></div>
+	<div id="output2"></div>
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script>
+	$(function() {
+
+		$('#btn').on('click', function() {
+			var value = $('input').val();
+			var valuSplit = value.split('').join(' ');
+			console.log(valuSplit);
+			$('#output').html(value);
+			$('#output2').html(valuSplit);
+		});
+	});
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

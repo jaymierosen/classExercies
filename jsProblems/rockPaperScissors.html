@@ -121,31 +121,35 @@
 							if (choice2 === "scissors") {
 								return "Rock wins";
 							} else {
-								if (choice2 === 'scissor')
+								if (choice2 === 'paper')
 								return "Paper wins";
 							}
 
 						} else if (choice1 === "paper") {
-							if (compChoice === "rock") {
+							if (choice2 === "rock") {
 								return "Paper wins";
 							} else {
-								return "You lose 4");
+								if (choice2 === 'scissors')
+								return "Scissors win";
 							}
 
 						} else {
-							if (compChoice === "paper") {
-								console.log("You win 5");
+							if (choice1 === "rock") {
+								return 'rock wins';
 							} else {
-								console.log("You lose 6");
+								if (choice2 === 'paper')
+								return 'scissors wins'
 							}
 						}
 					}
 
-					console.log("User Choice: " +userChoice);
+					console.log("User Choice: " +userInput);
 
-					console.log("Computer Choice: " + compChoice);
+					console.log("Computer Choice: " + compChoice());
 
-					console.log
+					console.log(compare(userInput, compChoice()));
+
+
 
 
 
