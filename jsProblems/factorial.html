@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Factorial</title>
+</head>
+
+	<style>
+
+	body {
+		background:#333;
+		color:white;
+		font-size:62.5%;
+		text-align:center;
+	}
+
+	h1 {
+		font-size:5rem;
+		max-width:40%;
+		margin:0 auto;
+	}
+	
+	input {
+		border:1px solid orange;
+		font-size:1.5rem;
+		border-radius:5px;
+		background:lightgray;
+		
+	}
+
+	p {
+		font-size:1.5rem;
+		color:white;
+
+	}
+
+	a {
+		font-size:1.5rem;
+		border:1px solid white;
+		border-radius: 5px;
+		padding:3px;
+		transition:.5s;
+
+	}
+
+	a:hover {
+		cursor: crosshair;
+		background:orange;
+		color:#333;
+		border:1px solid black;
+	}
+
+	div#output {
+		font-size: 5rem;
+		transition:2s;
+		padding:50px;
+	}
+
+
+		
+	</style>
+<body>
+	
+	<h1>Freakin' Fantastic Factorial Fun!</h1>
+
+
+	<p>Enter a number below</p>
+	<input type="textbox" id="number"/>
+	<a href"#" id="btn" value="factorial">And click here!</a>
+	<div id="output"></div>
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	
+	$(function() {
+
+		var factorial = function(n) {
+		    if(n == 0) {
+		        return 1
+		    } else {
+		        product = 1;
+		        for(var i = 1; i <= n; i++) {
+		            product *= i;
+		        }
+		        return product;
+		    }
+		};
+
+		$('#btn').on('click', function() {
+			console.log('It works!');
+			$('#output').html('').append(factorial($('#number').val()));
+		});
+
+	});
+
+
+
+	</script>
+</body>
+</html>
