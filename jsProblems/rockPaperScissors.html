@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rock, Paper, Scissors!</title>
+
+	<style>
+		body {
+			background:cyan;
+			font-size:62.5%;
+		}	
+		h1 {
+			color:#333;
+			font-size:3rem;
+		}
+
+		input {
+			margin:4px 0;
+			display:none;
+		}
+
+		p {
+			font-size:1.5rem;
+		}
+
+		a.start {
+			display:block;
+			background:#333;
+			color:white;
+			border:1px solid white;
+			padding: 3px;
+			font-size:1.5rem;
+			text-align:center;
+		}
+
+		a#btn {
+			background:#333;
+			color:white;
+			border:1px solid white;
+			padding: 3px;
+			display:none;
+
+		}
+
+		a:hover {
+			color:orange;
+			border:1px solid orange;
+			cursor:pointer;
+		}
+
+		#output {
+			font-size:1.5rem;
+		}
+
+		.color {
+			color:orange;
+		}
+	</style>
+</head>
+<body>
+	<h1>Look at the console, dummy --></h1>
+	<p>Rock, Paper, or Scissors?</p>
+	<a href="" class="start">Want to play?</a>
+	<input type="textbox" id="textInput"/>
+	<a href"#" id="btn" value="rPS">Click Here!</a>
+
+	<div id="output"></div>
+
+
+
+	<!-- Write a function that plays rock, paper, scissors! It should take a user input of ‘rock’, ‘paper’, or ‘scissors’ as a parameter, randomly choose one of the three for itself, and then log or return the result of the match-up in a readable, friendly manner. -->
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+
+
+			$('.start').on('click', function (e) {
+				e.preventDefault();
+
+				$(this).css("display", "none");
+				$('input').css('display', 'inline-block')
+				$('#btn').css('display', 'inline-block');
+			});
+
+			$('#btn').on('click', function () {
+
+
+				// Trap the user's input
+				var userInput = $('input').val().toLowerCase();
+
+
+				//Tell the user what's up if they sumbitted without entering a value
+				if ($('input').val() === ('')) {
+					$('#output').html("Hey dummy, you need to enter in your choice!");
+
+				//Actually play the game
+				} else if (userInput === "rock" || userInput === "scissors" || userInput === "paper") {
+					$('#output').html("You chose <span class='color'>" + userInput + "</span>, nice Choice!");
+					$('input').val('');
+
+						
+					//generate a random value of rock, paper, or scissors
+					var compChoice = function() {
+						var random = Math.random();
+						if (random <= 0.33) {
+							return "rock";
+						} else if (random >= 0.66) {
+							return "paper";
+						} else {
+							return "scissors";
+						}
+					};
+
+					var compare = function(choice1, choice2) {
+						if (choice1 === choice2) {
+							return ("It's a tie!");
+
+						} else if (choice1 === "rock") {
+							if (choice2 === "scissors") {
+								return "Rock wins";
+							} else {
+								if (choice2 === 'scissor')
+								return "Paper wins";
+							}
+
+						} else if (choice1 === "paper") {
+							if (compChoice === "rock") {
+								return "Paper wins";
+							} else {
+								return "You lose 4");
+							}
+
+						} else {
+							if (compChoice === "paper") {
+								console.log("You win 5");
+							} else {
+								console.log("You lose 6");
+							}
+						}
+					}
+
+					console.log("User Choice: " +userChoice);
+
+					console.log("Computer Choice: " + compChoice);
+
+					console.log
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				// Correct them if they tried to enter in a different word
+				} else {
+					$('#output').html("That's not how you spell 'rock', 'paper', or 'scissors'");
+					$('input').val('');
+				}
+			});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		});
+
+
+	</script>
+	
+</body>
+</html>
