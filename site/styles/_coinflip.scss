@@ -1,36 +1,17 @@
-section#coinflip {
+section#coinFlip {
 	height:100vh;
-	background:#333;
-	color:white;
+	background:white;
+	color:#333;
 	margin:0;
 	padding:0;
-	font-size: 62.5%;
+	padding-top:80px;
+
 }
-
-.mainCont {
-	display:flex;
-	flex-direction:column;
-}
-
-
-
-
-#header {
-	background:cyan;
-	text-align:center;
-	width:100%;
-	h2 {
-		margin:0;
-		color:#333;
-		padding:20px;
-		font-size:5rem;
-	}
-}
-
-#mainSection {
+.mainSection {
 	display:flex;
 	flex-direction:column;
 	padding:20px 0;
+	text-align:center;
 	.results {
 		flex:1 0 auto;
 		.total {
@@ -42,7 +23,6 @@ section#coinflip {
 			.ms-headsNum,
 			.ms-tailsNum {
 				display:inline-block;
-				text-align:center;
 				font-size:4rem;
 				margin:0;
 				padding:0;
@@ -57,9 +37,8 @@ section#coinflip {
 	} .pressBox {
 		flex:1 0 auto;
 		padding:10px;
-		text-align:center;
 		p {
-			color:white;
+			color:#333;
 			margin:0;
 			padding:0;
 			font-size: 12rem;
@@ -75,7 +54,7 @@ section#coinflip {
 .reset {
 	display:inline-block;
 	text-align:center;
-	color:white;
+	color:#333;
 	margin:0 auto;
 	border:1px solid white;
 	font-size:2rem;

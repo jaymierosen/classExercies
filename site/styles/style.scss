@@ -1,15 +1,80 @@
 @import 'normalize';
-@import 'coinflip';
+
+.container {
+	max-width:1180px;
+}
+
+.flexplicit {
+	display:flex !important;
+}
+
 
 header#header {
 	height:100vh;
-	background:cyan;
-	padding:30px;
-	text-align:center;
-	h1 {
-		color#333;
-	} h4 {
-		color:#33;
+	background:#333;
+	input[type="checkbox"] {
+		display: none;
+		border:1px solid red;
+	} input[type=checkbox]:checked ~ ul.mainNav {
+	  left:0;
+	} input[type=checkbox]:checked ~ .container {
+	  width: 100%;
+	  position: relative;
+	} input[type=checkbox]:checked ~ label {
+	  left:30;
+	} ul.mainNav {
+		position: fixed;
+		width:30%;
+		background:white;
+		top:0;
+		bottom:0;
+		margin:0;
+		padding-top:80px;
+		box-shadow:0 0 10px black;
+		left:-30%;
+		z-index: 10;
+		-webkit-transition: all 0.5s;
+		li {
+			flex:1 0 auto;
+			list-style:none;
+			a {
+				display: block;
+				font-size:15px;
+				color: #333;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}a:hover {
+				background:lightseagreen;
+			}
+		}
+	} div.hero {
+		-webkit-transition: all 0.5s;
+		position: relative;
+		left:0;
+		width: 100%;
+		padding:20px;
+		label[for="toggle"] {
+			position:fixed;
+			font-size:1.5rem;
+			background:cyan;
+			float: left;
+			color:white;
+			z-index: 20;
+			cursor: pointer;
+		}h1 {
+			color:white;
+			line-height: 2;
+		} h4 {
+			color:white;
+			line-height: 2;
+		}
 	}
-
 }
+
+
+
+
+
+@import 'coinflip';
+@import 'factorial';
+@import 'bigger';

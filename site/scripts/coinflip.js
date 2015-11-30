@@ -29,7 +29,8 @@ var total = {
  $(document).ready(function() {
 
 
-  $(".oneT").on('click', function() {
+  $(".oneT").on('click', function(e) {
+    e.preventDefault();
     flipMany(1);
     console.log(total);
     $('.ms-headsNum').html(total.heads);
@@ -37,7 +38,8 @@ var total = {
     console.log("Its working!");
   });
 
-  $(".tenT").on('click', function() {
+  $(".tenT").on('click', function(e) {
+    e.preventDefault();
     flipMany(10);
     console.log(total);
     $('.ms-headsNum').html(total.heads);
@@ -45,7 +47,8 @@ var total = {
     console.log("Its working!");
   });
 
-  $(".billT").on('click', function() {
+  $(".billT").on('click', function(e) {
+    e.preventDefault();
     flipMany(100);
     console.log(total);
     $('.ms-headsNum').html(total.heads);
@@ -53,7 +56,8 @@ var total = {
     console.log("Its working!");
   });
 
-  $(".reset").on('click', function() {
+  $(".reset").on('click', function(e) {
+    e.preventDefault();
     $('.ms-headsNum').html('0');
     $('.ms-tailsNum').html('0');
     total.heads = 0;
