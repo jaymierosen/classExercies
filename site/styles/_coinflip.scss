@@ -4,13 +4,16 @@ section#coinFlip {
 	color:#333;
 	margin:0;
 	padding:0;
-	padding-top:80px;
+	padding-top:20px;
+	h2 {
+		text-align:center;
+		font-size:4rem;
+	}
 
 }
 .mainSection {
 	display:flex;
 	flex-direction:column;
-	padding:20px 0;
 	text-align:center;
 	.results {
 		flex:1 0 auto;

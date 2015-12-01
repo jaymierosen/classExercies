@@ -36,6 +36,7 @@ header#header {
 		-webkit-transition: all 0.5s;
 		li {
 			flex:1 0 auto;
+			margin:10px 0;
 			list-style:none;
 			a {
 				display: block;
@@ -55,18 +56,21 @@ header#header {
 		padding:20px;
 		label[for="toggle"] {
 			position:fixed;
-			font-size:1.5rem;
-			background:cyan;
+			font-size:3rem;
 			float: left;
-			color:white;
+			color:orange;
 			z-index: 20;
 			cursor: pointer;
-		}h1 {
-			color:white;
-			line-height: 2;
-		} h4 {
-			color:white;
-			line-height: 2;
+		}div.heroBox{
+			text-align:center;
+			margin-top:50px;
+			h1 {
+				color:white;
+				line-height: 2;
+			} h4 {
+				color:white;
+				line-height: 2;
+			}
 		}
 	}
 }

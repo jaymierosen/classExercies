@@ -2,7 +2,7 @@ section#factorial {
 	text-align:center;
 		background:#333;
 		height:100vh;
-		padding-top:80px;
+		padding-top:20px;
 	.fact-title {
 		font-size:5rem;
 		max-width:40%;
@@ -11,15 +11,16 @@ section#factorial {
 		font-size:1.5rem;
 		color:white;
 	} input#number {
-		border:1px solid orange;
+		border:2px solid orange;
 		font-size:1.5rem;
 		border-radius:5px;
 		background:lightgray;
 	} a#btn {
 		font-size:1.5rem;
-		border:1px solid white;
+		border:1px solid black;
 		border-radius: 5px;
-		padding:3px;
+		background:orange;
+		padding:5px;
 		transition:.5s;
 	} a:hover {
 		cursor: pointer;
@@ -29,6 +30,6 @@ section#factorial {
 	} div#output {
 		font-size: 5rem;
 		transition:2s;
-		padding:50px;
+		padding:20px;
 	}
 }
